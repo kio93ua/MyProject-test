@@ -3,6 +3,7 @@ document.querySelectorAll('.accordion-btn').forEach(button => {
         
         const isActive = button.classList.contains('active');
 
+        
         document.querySelectorAll('.accordion-btn').forEach(btn => {
             btn.classList.remove('active');
             btn.nextElementSibling.classList.remove('open');
@@ -12,7 +13,12 @@ document.querySelectorAll('.accordion-btn').forEach(button => {
         if (!isActive) {
             button.classList.add('active');
             button.nextElementSibling.classList.add('open');
+
+            
+            document.querySelector('.faq-decor-right').style.top = '69px';
+        } else {
+            
+            document.querySelector('.faq-decor-right').style.top = '-55px';
         }
     });
 });
-
